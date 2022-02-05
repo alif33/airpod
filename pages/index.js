@@ -3,9 +3,12 @@ import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import Script from 'next/script';
+import Video from '../components/Video';
 
 export default function Home() {
-
+  useEffect(()=>{
+    Video(document)
+  }, [])
   return (
     <div className={styles.container}>
       <Head>
@@ -25,24 +28,6 @@ export default function Home() {
           <h1>REVOLUTIONARRY</h1>
         </section>
       </main>
-    <Script
-      src="/js/ScrollMagic.min.js"
-    ></Script>
-    <Script
-      src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.js"
-      integrity="sha256-peenofh8a9TIqKdPKIeQE7mJvuwh+J0To7nslvpj1jI="
-      crossorigin="anonymous"
-    ></Script>
-    <Script
-      src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.js"
-      integrity="sha256-31FC/OT6XpfjAhj9FuXjw5/wPXXawCAjJQ29E23/XPk="
-      crossorigin="anonymous"
-    ></Script>
-    <Script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
-      integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U="
-      crossorigin="anonymous"
-    ></Script>
       <Script src="/js/script.js"></Script>
     </div>
   )
